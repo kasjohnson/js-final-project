@@ -1,19 +1,35 @@
 
-const path = require('path')
-const router = require('express').Router()
+const express = require('express')
+const router = express.Router()
 
-const root = path.join(__dirname, '..', 'public')
+//webpage routes
 
-router.get('/', (request, response) => {
-    response.sendFile('index.html', { root })
+router.get('/test', (_, response) =>{
+    response.send('hi')
 })
 
-router.get('/pokemon/:id', (request, response) => {
-    response.sendFile('index.html', { root })
+router.get('/menu', (_, response) =>{
+    response.sendFile('index.html', {root})
 })
 
-router.get('/type/:type', (request, response) => {
-    response.sendFile('index.html', { root })
+router.get('/events', (_, response) =>{
+    response.sendFile('index.html', {root})
+})
+
+router.get('/menu/:id', (_, response) =>{
+    response.sendFile('index.html', {root})
+})
+
+router.get('/events/:id', (_, response) =>{
+    response.sendFile('index.html', {root})
+})
+
+router.get('/menu/', (_, response) =>{
+    response.sendFile('index.html', {root})
+})
+
+router.get('/events', (_, response) =>{
+    response.sendFile('index.html', {root})
 })
 
 module.exports = router
