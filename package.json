@@ -1,0 +1,14 @@
+{
+  "name": "js-final-project",
+  "version": "1.0.0",
+  "description": "JavaScript Final Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kayla J, Alex F",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
