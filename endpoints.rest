@@ -1,0 +1,21 @@
+
+@api= http://localhost:3000/api/v1
+
+### Get Menu Items
+GET @api/menu
+
+### Get Event Items
+GET @api/events
+
+### Get Menu Item by ID
+GET @api/menu/:id 
+
+### Get Event by ID
+GET @api/events/:id 
+
+### Add Menu Item 
+POST @api/menu
+
+### Add Event
+POST @api/events
+

@@ -1,7 +1,49 @@
 
+
+
+
 body{
     margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+header{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+nav{
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-end;
+    background-color: black;
+    
+}
+nav ul{
+    display: flex;
+}
+
 nav ul li{
     list-style-type: none;
+    padding-right: 150px;
+    color: white;
+}
+
+nav ul li:hover{
+    color: red;
+    font-weight: 700;
+}
+h1{
+    margin-left: 150px;
+    color: red;
+}
+
+#menu{
+    text-align: center;
+    margin-bottom: 50px;
+}
+#events{
+     text-align: center;
+     margin-bottom: 50px;
 }
