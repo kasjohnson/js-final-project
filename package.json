@@ -9,6 +9,7 @@
   "author": "Kayla J, Alex F",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongodb": "^6.16.0"
   }
 }
