@@ -11,13 +11,4 @@
   "dependencies": {
     "express": "^5.1.0",
     "mongodb": "^6.16.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kasjohnson/js-final-project.git"
-  },
-  "bugs": {
-    "url": "https://github.com/kasjohnson/js-final-project/issues"
-  },
-  "homepage": "https://github.com/kasjohnson/js-final-project#readme"
 }

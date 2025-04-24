@@ -2,11 +2,11 @@
 const express = require('express')
 const router = express.Router()
 
-//webpage routes
 
-router.get('/test', (_, response) =>{
-    response.send('hi')
-})
+const path = require('path')
+const root = path.join(__dirname, 'public')
+
+//webpage routes
 
 router.get('/menu', (_, response) =>{
     response.sendFile('index.html', {root})
@@ -24,11 +24,13 @@ router.get('/events/:id', (_, response) =>{
     response.sendFile('index.html', {root})
 })
 
-router.get('/menu/', (_, response) =>{
+
+router.post('/menu/', (_, response) =>{
     response.sendFile('index.html', {root})
 })
 
-router.get('/events', (_, response) =>{
+router.post('/events', (_, response) =>{
+
     response.sendFile('index.html', {root})
 })
 
