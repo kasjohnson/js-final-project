@@ -1,0 +1,39 @@
+
+### Variables
+ @url = http://localhost:3000/api/v1
+ @menuId = 6807ddcf1f3fe212dda49f27
+ @eventId = 680a546a02755fe000e0c262
+
+### Get Menu
+GET {{url}}/menu
+
+### Get Events
+GET {{url}}/events
+
+### Get Menu By ID
+GET {{url}}/menu/{{menuId}}
+
+### Get Event By ID
+GET {{url}}/events/{{eventId}}
+
+### Post To Menu
+POST {{url}}/menu 
+Content-Type: application/json 
+
+{
+    "name" : "Test",
+    "description" : "Testing",
+    "price" : "10.99",
+    "url" : "https://example.com/image.jpg"
+}
+
+### Post To Event
+POST {{url}}/events
+Content-Type: application/json 
+
+{
+    "name" : "Test",
+    "location" : "123 Main St, City, State, Zip",
+    "date" : "2023-10-01T00:00:00Z",
+    "time" : "12:00"
+}

@@ -7,6 +7,6 @@ app.use(express.json())
 app.use(express.static('public'))
 
 app.use('/', require('./public/routes/static.js'))
-app.use('/api/v1/food-truck', require('./public/routes/api/v1/food-truck'))
+app.use('/api/v1/', require('./public/routes/api/v1/food-truck'))
 
 app.listen(port,() => console.log(`Running: http://localhost:${port}`))
