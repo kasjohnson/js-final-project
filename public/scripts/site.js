@@ -25,9 +25,9 @@ const showMenuList = menuItems => {
     });
 }
 
-const showMenuDetails = async id => {
-    const {name, description, price, url} = await getMenuItemById(id)
-}
+// const showMenuDetails = async id => {
+//     const {name, description, price, url} = await getMenuItemById(id)
+// }
 
 ;(async () => {
     const menuItems = await getMenuItems()
@@ -52,7 +52,7 @@ const showEventList = eventItems => {
     eventItems.forEach(({_id,name, date}) => {
         const eventItem = document.createElement('div')
         eventItem.innerHTML = `
-        <a href="/event.html?${_id}" class= "event-link">
+        <a href="event.html" class= "event-link">
             <h2>${name}</h2></a>
             <p> ${date}</p>
         `
