@@ -8,28 +8,28 @@ const root = path.join(__dirname, 'public')
 
 //webpage routes
 
-router.get('/menu', (_, response) =>{
+router.get('api/v1/menu', (_, response) =>{
     response.sendFile('index.html', {root})
 })
 
-router.get('/events', (_, response) =>{
+router.get('api/v1/events', (_, response) =>{
     response.sendFile('index.html', {root})
 })
 
-router.get('/menu/:id', (_, response) =>{
+router.get('api/v1/menu/:id', (_, response) =>{
     response.sendFile('index.html', {root})
 })
 
-router.get('/events/:id', (_, response) =>{
-    response.sendFile('index.html', {root})
+router.get('api/v1/event/:id', (_, response) =>{
+    response.sendFile('event.html', {root})
 })
 
 
-router.post('/menu/', (_, response) =>{
+router.post('api/v1/menu', (_, response) =>{
     response.sendFile('index.html', {root})
 })
 
-router.post('/events', (_, response) =>{
+router.post('api/v1/events', (_, response) =>{
 
     response.sendFile('index.html', {root})
 })

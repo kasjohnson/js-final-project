@@ -29,10 +29,11 @@ router.get('/test', async (_, response) =>{
         const found = await collection.find({}).toArray()
         const data = found.map((event) => {
             return {
+                _id: event._id,
                 name: event.name,
                 location: event.location,
                 date: event.date,
-                image: event.time
+                time: event.time
             }
         })
         response.send(data)
@@ -57,10 +58,11 @@ router.get('/test', async (_, response) =>{
         const found = await collection.findOne({_id: new ObjectId(id)})
         if (!found) return response.status(404).send('Event not found')
             return response.send({
+                _id: found._id,
                 name: found.name,
                 location: found.location,
                 date: found.date,
-                image: found.time
+                time: found.time
             })
     })
     

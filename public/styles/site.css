@@ -27,12 +27,23 @@ nav ul{
 nav ul li{
     list-style-type: none;
     padding-right: 150px;
-    color: white;
 }
 
 nav ul li:hover{
     color: red;
     font-weight: 700;
+}
+a{
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 550;
+    color:orange;
+}
+p{
+    font-size: 1.2em;
+}
+nav a{
+    color: white;
 }
 h1{
     margin-left: 150px;
@@ -46,4 +57,35 @@ h1{
 #events{
      text-align: center;
      margin-bottom: 50px;
+}
+.menuList{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.menuForm{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+label{
+    font-weight: bold;
+}
+input{
+    width: 500px;
+    height: 28px;
+}
+
+.eventForm{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+button{
+    width: 100px;
+    height: 50px;
+    background-color: orange;
+    
+    font-weight: bold;
+    border-radius: 5px;
 }

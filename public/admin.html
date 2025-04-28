@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diablo's Tacos | Admin</title>
+    <link rel="stylesheet" href="styles/site.css">
+    <script src="./scripts/site.js" defer></script>
+</head>
+<body>
+    <a href="index.html"><h1>Diablo's Tacos</h1></a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="admin.html">Admin</a></li>
+        </ul>
+    </nav>
+    <header>
+        
+        <img src="styles/taco-hero-image.jpg" alt="Tacos">
+    </header>
+    <main>
+        <h2>Enter a New Menu Item</h2>
+        <div class="menuForm">
+            <form action = " "  method="POST" id="menu">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description" required>
+
+                <label for="price">Price:</label>
+                <input type="text" id="price" name="price" required>
+
+                <label for="image-url">Image URL:</label>
+                <input type="text" id="image-url" name="image-url" required>
+
+                <button type="submit">Submit New Menu Item</button>
+            </form>
+        </div>  
+        <h2>Enter a New Event</h2>
+        <div class="eventForm"></div>
+            <form action = " " method="POST" id="events">
+            
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            
+                <label for="date">Date:</label>
+                <input type="text" id="date" name="date" required>
+
+                <label for="time">Time:</label>
+                <input type="text" id="time" name="time" required>
+
+                <button type="submit">Submit New Event</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

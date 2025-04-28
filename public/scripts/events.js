@@ -1,0 +1,31 @@
+const eventDetails =document.querySelector('#eventDetails')
+
+const getEventItemById = async () => {
+    const id = window.location.pathname.split("/").pop()
+
+    const response = await fetch(`api/v1/events/${id}`)
+    const event = await response.json()
+    
+    const eventDetail =document.querySelector("#eventDetails")
+    eventDetail.innerHTML=`
+        <h2> ${event.name}</h2>
+        <p><strong>Location:</strong> ${event.location}</p>
+        <p><strong>Date:</strong> ${event.date}</p>
+        <p><strong>Time:</strong> ${event.time}</p>
+    `
+    eventDetail.onclick = event => {
+        const eventLink = event.target.closest(".event-link");
+        if (!eventLink) return;
+    
+        const eventId = eventLink.getAttribute("href").split("/").pop();
+        window.location.href = `/event/${eventId}`
+    }
+}
+(async () => {
+    await getEventItemById()
+})();
+
+//  const showEventDetails = async id => {
+//     const {_id, name, location, date, time} = await getEventItemById(_id)
+
+//  }
