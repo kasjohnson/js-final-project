@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diablo's Tacos | Admin</title>
     <link rel="stylesheet" href="styles/site.css">
-    <script src="./scripts/site.js" defer></script>
+    <script src="/scripts/site.js" defer></script>
 </head>
 <body>
     <a href="index.html"><h1>Diablo's Tacos</h1></a>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#events">Events</a></li>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="index.html">Events</a></li>
             <li><a href="admin.html">Admin</a></li>
         </ul>
     </nav>
@@ -24,7 +24,7 @@
     <main>
         <h2>Enter a New Menu Item</h2>
         <div class="menuForm">
-            <form action = " "  method="POST" id="menu">
+            <form action = "/menu" method="POST" id="menu">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -37,12 +37,17 @@
                 <label for="image-url">Image URL:</label>
                 <input type="text" id="image-url" name="image-url" required>
 
-                <button type="submit">Submit New Menu Item</button>
+                <button type="submit" id="menuSubmit">Submit</button>
             </form>
-        </div>  
+        </div> 
+        <div id="menuMessage">
+
+        </div>
+        <hr>
+        <br> 
         <h2>Enter a New Event</h2>
-        <div class="eventForm"></div>
-            <form action = " " method="POST" id="events">
+        <div class="eventForm">
+            <form action="/events" method="POST" id="events">
             
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -56,8 +61,11 @@
                 <label for="time">Time:</label>
                 <input type="text" id="time" name="time" required>
 
-                <button type="submit">Submit New Event</button>
+                <button type="submit" id="eventSubmit">Submit</button>
             </form>
+        </div>
+        <div id="eventMessage">
+
         </div>
     </main>
 </body>

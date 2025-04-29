@@ -1,7 +1,7 @@
 
 
 const router = require('express').Router()
-const { ObjectId, getCollection} = require('../../../../dbconnect.js')
+const { ObjectId, getCollection} = require('../../../dbconnect.js')
 
 // routes
 router.get('/test', async (_, response) =>{

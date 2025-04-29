@@ -35,11 +35,11 @@ const showMenuList = menuItems => {
     const eventItems = await getEventItems()
     showEventList(eventItems)
 
-    if (window.location.pathname.startsWith("/event/")) {
-        document.addEventListener("DOMContentLoaded", async () => {
-            await getEventItemById();
-        });
-    }
+    // if (window.location.pathname.startsWith("/event/")) {
+    //     document.addEventListener("DOMContentLoaded", async () => {
+    //         await getEventItemById();
+    //     });
+    // }
 })()
 
 
@@ -51,12 +51,14 @@ const getEventItems = async () => {
 const showEventList = eventItems => {
     eventItems.forEach(({_id,name, date}) => {
         const eventItem = document.createElement('div')
+       
         eventItem.innerHTML = `
-        <a href="event.html" class= "event-link">
+        <a href="event/${_id}" class= "event-link">
             <h2>${name}</h2></a>
             <p> ${date}</p>
         `
         eventList.appendChild(eventItem)
+
     });
 }
 

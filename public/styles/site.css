@@ -63,29 +63,59 @@ h1{
     grid-template-columns: repeat(4, 1fr);
 }
 
+a:hover{
+    color: orange;
+}
+
+/*Event Page*/
+#eventContainer{
+
+    border: 5px solid orange;
+    width: 600px;
+    margin-top: 20px;
+    padding-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* Admin Page*/
+h2{
+    text-align: center;
+}
+
 .menuForm{
-    display: flex;
-    justify-content: center;
-    
-    
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    margin-bottom: 15px;
+
 }
 label{
     font-weight: bold;
+    text-align: left;
 }
 input{
-    width: 500px;
     height: 28px;
+    width: 400px;
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
 }
 
 .eventForm{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  margin-bottom: 15px;
+
+
 }
 button{
-    width: 100px;
-    height: 50px;
+    width: 85px;
+    height: 40px;
     background-color: orange;
-    
+    font-size: 1em;
     font-weight: bold;
     border-radius: 5px;
 }
