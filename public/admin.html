@@ -12,8 +12,8 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">Menu</a></li>
-            <li><a href="index.html">Events</a></li>
+            <li><a href="../index.html#menu">Menu</a></li>
+            <li><a href="../index.html#events">Events</a></li>
             <li><a href="admin.html">Admin</a></li>
         </ul>
     </nav>
@@ -22,9 +22,10 @@
         <img src="styles/taco-hero-image.jpg" alt="Tacos">
     </header>
     <main>
-        <h2>Enter a New Menu Item</h2>
+        <h2 class="adminH2">Enter a New <span class="special">Menu</span> Item</h2>
+        <div id="menuMessage"></div>
         <div class="menuForm">
-            <form id="menu">
+            <form id="menuA">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -37,17 +38,17 @@
                 <label for="image-url">Image URL:</label>
                 <input type="text" id="image-url" name="image-url" required>
 
+                <div></div>
                 <button type="submit" id="menuSubmit">Submit</button>
             </form>
         </div> 
-        <div id="menuMessage">
-
-        </div>
+        
         <hr>
         <br> 
-        <h2>Enter a New Event</h2>
+        <h2 class="adminH2">Enter a New <span class="special">Event</span></h2>
+        <div id="eventMessage"> </div>
         <div class="eventForm">
-            <form id="events">
+            <form id="eventsA">
             
                 <label for="name">Name:</label>
                 <input type="text" id="eventName" name="name" required>
@@ -61,12 +62,11 @@
                 <label for="time">Time:</label>
                 <input type="text" id="time" name="time" required>
 
+                <div></div>
                 <button type="submit" id="eventSubmit">Submit</button>
             </form>
         </div>
-        <div id="eventMessage">
-
-        </div>
+       
     </main>
 </body>
 </html>

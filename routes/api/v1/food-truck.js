@@ -75,7 +75,7 @@ router.get('/test', async (_, response) =>{
 
         const collection = await getCollection('food-truckDB', 'menuItems')
         const found = await collection.findOne({ "name": name })
-        if (found) return response.status(400).send(`Item already exists`)
+        if (found) return response.status(400).send({message:`Item already exists`})
 
         // Insert worked!
         const { acknowledged, insertedId } = await collection.insertOne({
@@ -99,7 +99,7 @@ router.get('/test', async (_, response) =>{
 
         const collection =  await getCollection('food-truckDB', 'events')
         const found = await collection.findOne({ "name": name })
-        if (found) return response.status(400).send('Event already exists')
+        if (found) return response.status(400).send({message:'Event already exists'})
 
         // Insert worked!
         const { acknowledged, insertedId } = await collection.insertOne({

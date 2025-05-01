@@ -54,7 +54,7 @@ const showEventList = eventItems => {
        
         eventItem.innerHTML = `
         <a href="event/${_id}" class= "event-link">
-            <h2>${name}</h2></a>
+            <h3>${name}</h3></a>
             <p> ${date}</p>
         `
         eventList.appendChild(eventItem)
