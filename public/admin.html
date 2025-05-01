@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diablo's Tacos | Admin</title>
     <link rel="stylesheet" href="styles/site.css">
-    <script src="/scripts/site.js" defer></script>
+    <script src="/scripts/admin.js" defer></script>
 </head>
 <body>
     <a href="index.html"><h1>Diablo's Tacos</h1></a>
@@ -24,7 +24,7 @@
     <main>
         <h2>Enter a New Menu Item</h2>
         <div class="menuForm">
-            <form action = "/menu" method="POST" id="menu">
+            <form id="menu">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -47,10 +47,10 @@
         <br> 
         <h2>Enter a New Event</h2>
         <div class="eventForm">
-            <form action="/events" method="POST" id="events">
+            <form id="events">
             
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="eventName" name="name" required>
             
                 <label for="location">Location:</label>
                 <input type="text" id="location" name="location" required>

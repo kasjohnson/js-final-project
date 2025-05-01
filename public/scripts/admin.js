@@ -1,8 +1,8 @@
 const menuMessage =document.querySelector('#menuMessage')
 const eventMessage =document.querySelector('#eventMessage')
 
-const menuSubmit= document.querySelector('#menuSubmit')
-const eventSubmit= document.querySelector('#eventSubmit')
+const menuSubmit= document.querySelector('#menu')
+const eventSubmit= document.querySelector('#events')
 
 
 const addMenuItem = async () => {
@@ -19,24 +19,36 @@ const addMenuItem = async () => {
         })
     
     const result= await response.json()
-    menuMessage.innerHTML = result.message
-    
+    menuMessage.textContent = result.message
 }
 
-(async () => {
-    await addMenuItem()
-});
-
-menuSubmit.addEventListener('click', addMenuItem )
+menuSubmit.addEventListener('submit', async function(event) {
+    event.preventDefault() 
+    await addMenuItem()  
+})
 
 
 const addEventItem = async () => {
-
-    const response = await fetch(`/api/v1/events`)
-    return await response.json()
+    const name = document.querySelector('#eventName').value;
+    const location = document.querySelector('#location').value;
+    const date = document.querySelector('#date').value;
+    const time = document.querySelector('#time').value;
+console.log(name, location, date, time)
+    const response = await fetch(`/api/v1/events`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'},
+            body: JSON.stringify({name, location, date, time})
+        })
     
+    const result= await response.json()
+    eventMessage.textContent = result.message
 }
-(async () => {
-    await addEventItem()
-})();
+
+eventSubmit.addEventListener('submit', async function(event) {
+    event.preventDefault() 
+    await addEventItem()  
+})
+
+
     
