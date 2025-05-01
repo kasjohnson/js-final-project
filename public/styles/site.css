@@ -114,8 +114,8 @@ h2{
     color: orange;
 }
 .special{
-    
     color: black;
+    font-style: italic;
 }
 .menuForm, .eventForm{
     width: 850px;
@@ -155,9 +155,16 @@ button{
 }
 
 #menuMessage, #eventMessage{
-    color: orange;
+    /*color: green;*/
     font-weight: 400;
     font-size: 1.2em;
     text-align: center;
     margin-bottom: 10px;
+}
+
+.red{
+    color:red;
+}
+.green{
+    color: green;
 }

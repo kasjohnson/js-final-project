@@ -5,12 +5,6 @@ const getEventItemById = async () => {
 
     const response = await fetch(`/api/v1/events/${id}`)
     const event = await response.json()
-    
-    // eventDetails.onclick = event => {
-    //     const eventLink = event.target.closest(".event-link");
-    //     if (!eventLink) return;
-    
-    // }
 
     eventDetails.innerHTML=`
         <h3> ${event.name}</h3>
@@ -23,7 +17,3 @@ const getEventItemById = async () => {
     await getEventItemById()
 })();
 
-//  const showEventDetails = async id => {
-//     const {_id, name, location, date, time} = await getEventItemById(_id)
-
-//  }

@@ -25,9 +25,6 @@ const showMenuList = menuItems => {
     });
 }
 
-// const showMenuDetails = async id => {
-//     const {name, description, price, url} = await getMenuItemById(id)
-// }
 
 ;(async () => {
     const menuItems = await getMenuItems()
@@ -35,11 +32,6 @@ const showMenuList = menuItems => {
     const eventItems = await getEventItems()
     showEventList(eventItems)
 
-    // if (window.location.pathname.startsWith("/event/")) {
-    //     document.addEventListener("DOMContentLoaded", async () => {
-    //         await getEventItemById();
-    //     });
-    // }
 })()
 
 

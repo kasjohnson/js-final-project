@@ -24,7 +24,7 @@ Content-Type: application/json
     "name" : "Test",
     "description" : "Testing",
     "price" : "10.99",
-    "url" : "https://example.com/image.jpg"
+    "url" : "https://du9m0k402rjmo.cloudfront.net/images/P_38854/7c83c15e-6ec0-4a24-8b7e-5e339e257f5f.jpg"
 }
 
 ### Post To Event
